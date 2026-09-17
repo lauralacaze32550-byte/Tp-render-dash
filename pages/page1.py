@@ -1,20 +1,21 @@
-from dash import html, register_page, Dash, html, callback, Input, Output, dcc
+from dash import html, register_page, dcc
 
-register_page(__name__, name='Page 1')
+register_page(__name__, name="Page 1")
 
-app=Dash(__name__)
+opt = ["Oui", "Non"]
 
-opt = ['Oui', 'Non']
-
-app.layout = html.Div([
-
+layout = html.Div([
     html.H1("J'aime le canard :"),
-    dcc.Dropdown(id="dropdown", options=opt, value=opt[0]),
+    dcc.Dropdown(
+        id="dropdown1",
+        options=opt,
+        value=opt[0]
+    ),
 
     html.H1("J'aime le canard confit :"),
-    dcc.Dropdown(id="dropdown", options=opt, value=opt[0])
-
+    dcc.Dropdown(
+        id="dropdown2",
+        options=opt,
+        value=opt[0]
+    )
 ])
-
-if __name__ == "__main__":
-    app.run(debug=True)
