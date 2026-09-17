@@ -5,11 +5,11 @@
     bottom: 0;
     width: 18rem;
     padding: 2rem 1rem;
-    background-color: orange;
+    background-color: rgb(108, 170, 201);
 }
 
 .body {
-    background-color:green;
+    background-color:rgb(132, 185, 132);
     position:fixed;
     margin-left: 18rem;
     margin-right: 2rem;
